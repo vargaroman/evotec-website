@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Evotec — firemný web
 
-## Getting Started
+Prezentačný web postavený na Next.js (App Router), TypeScript, Tailwind CSS,
+shadcn/ui, Framer Motion a Sanity CMS.
 
-First, run the development server:
+## Tech stack
+
+| Potreba     | Technológia                  |
+| ----------- | ----------------------------- |
+| Framework   | Next.js 16 (App Router)       |
+| Jazyk       | TypeScript                    |
+| CSS         | Tailwind CSS v4                |
+| UI          | shadcn/ui (base-ui)           |
+| Animácie    | Framer Motion                 |
+| CMS         | Sanity (embednuté Studio)     |
+| Formuláre   | React Hook Form + Zod         |
+| E-mail      | Resend                        |
+| Hosting     | Vercel                        |
+| DNS/CDN     | Cloudflare                    |
+| Analytics   | Plausible                     |
+
+## Lokálny vývoj
 
 ```bash
+npm install
+cp .env.local.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Web pobeží na [http://localhost:3000](http://localhost:3000). Pokiaľ nemáte
+ešte nastavené premenné pre Sanity, stránky použijú vstavaný fallback obsah,
+takže web je funkčný aj bez CMS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Premenné prostredia
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Skopírujte `.env.local.example` do `.env.local` a doplňte:
 
-## Learn More
+- `NEXT_PUBLIC_SANITY_PROJECT_ID` / `NEXT_PUBLIC_SANITY_DATASET` — nájdete v
+  [sanity.io/manage](https://sanity.io/manage) po vytvorení projektu (pozri
+  nižšie).
+- `NEXT_PUBLIC_SITE_URL` — finálna URL webu (pre SEO, sitemap, OG tagy).
+- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` — doména zaregistrovaná v
+  [plausible.io](https://plausible.io).
+- `RESEND_API_KEY`, `CONTACT_EMAIL_TO`, `CONTACT_EMAIL_FROM` — pre odosielanie
+  správ z kontaktného formulára cez [resend.com](https://resend.com). Bez
+  nich sa správy len zalogujú na server (užitočné pre lokálny vývoj).
 
-To learn more about Next.js, take a look at the following resources:
+## Sanity CMS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Studio je embednuté priamo vo webe na `/studio`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Vytvorte nový projekt na [sanity.io](https://www.sanity.io/manage) (zdarma).
+2. Doplňte `NEXT_PUBLIC_SANITY_PROJECT_ID` a `NEXT_PUBLIC_SANITY_DATASET` do
+   `.env.local`.
+3. Spustite `npm run dev` a otvorte `/studio` — prihláste sa a začnite
+   pridávať obsah (nastavenia webu, riešenia, projekty, tím, referencie).
 
-## Deploy on Vercel
+Schémy sú definované v [`src/sanity/schemaTypes`](src/sanity/schemaTypes).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Obsahové typy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Nastavenia webu** (singleton) — názov, slogan, kontakt, sociálne siete.
+- **Služba** — kartičky procesu na homepage a stránke Riešenia.
+- **Člen tímu** — stránka O nás.
+- **Referencia** — testimonial sekcia na homepage (zobrazí sa len ak existuje aspoň jedna).
+
+Stránka `/projekty` (TRACS™ a e:agzat) je zámerne pevne zakódovaná v
+[`src/app/projekty/page.tsx`](src/app/projekty/page.tsx) — obsahuje bohatý,
+ručne napísaný obsah s fotkami namiesto generických CMS polí. Fotky sú v
+[`public/images/projects`](public/images/projects). Navigácia obsahuje priame
+odkazy `/projekty#tracs` a `/projekty#eagzat`, ktoré na stránke len
+odscrollujú na danú sekciu.
+
+Pokiaľ Sanity nie je nakonfigurované, každý typ obsahu má fallback dáta v
+[`src/lib/content.ts`](src/lib/content.ts) — nahraďte ich vlastným textom
+alebo použite Studio.
+
+## Deploy
+
+1. **Vercel** — importujte repozitár na [vercel.com/new](https://vercel.com/new),
+   doplňte rovnaké premenné prostredia ako v `.env.local` a nasaďte.
+2. **Cloudflare** — nastavte doménu ako DNS-only alebo cez Cloudflare proxy
+   smerujúcu na Vercel (CNAME na `cname.vercel-dns.com`), certifikát rieši
+   Vercel automaticky.
+3. Po nasadení pridajte produkčnú URL do `NEXT_PUBLIC_SITE_URL` a doménu do
+   Plausible.
+
+## Štruktúra projektu
+
+```
+src/
+  app/            # stránky (App Router) — /, /sluzby, /projekty, /o-nas, /kontakt
+  app/studio/     # embednuté Sanity Studio
+  app/api/contact # API route pre kontaktný formulár
+  components/     # UI komponenty, layout, animácie
+  lib/             # fetch helpery, validácia, fallback obsah
+  sanity/          # Sanity klient, schémy, GROQ queries
+```
