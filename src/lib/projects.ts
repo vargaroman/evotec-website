@@ -16,7 +16,7 @@ export const projectSummaries: ProjectSummary[] = [
     tagline: "Torque Redistribution Automatic Coupling System",
     icon: "shield",
     shortDescription:
-      "Pasívny mechanický systém, ktorý automaticky prerozdeľuje krútiaci moment na nápravu s lepšou trakciou — bez tlačidiel a bez zásahu vodiča.",
+      "Koleso stratí trakciu — a TRACS zareaguje skôr, než to stihnete postrehnúť. Čisto mechanicky, bez senzorov a bez zásahu vodiča.",
     image: {
       src: "/images/projects/tracs-field-test.jpg",
       alt: "Testovanie trakcie TRACS v teréne na dvoch traktoroch",

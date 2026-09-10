@@ -47,7 +47,8 @@ export type SiteSettings = {
 
 const fallbackSiteSettings: SiteSettings = {
   siteTitle: "Evotec",
-  tagline: "Vyvíjame stroje, ktoré fungujú lepšie.",
+  tagline:
+    "Vlastný vývoj, patentované technológie a prototypy pre elektrifikáciu a pohony pracovných strojov.",
   description:
     "Evotec navrhuje a vyvíja pracovné stroje, pohonové systémy a nové technológie — od konceptu až po funkčný prototyp. Produktová stratégia, mechanický vývoj, elektrifikácia aj testovanie pod jednou strechou.",
   email: "pastor.evotec@gmail.com",

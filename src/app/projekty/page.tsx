@@ -123,13 +123,17 @@ export default function ProjectsPage() {
               Torque Redistribution Automatic Coupling System
             </p>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-              Pasívny mechanický systém, ktorý vodičovi šetrí rozmýšľanie nad
-              trakčnými režimami. Stačí pridať plyn — TRACS mechanicky pomôže
-              hnanej náprave čo najlepšie využiť dostupnú priľnavosť na oboch
-              kolesách. Výsledkom je plynulejší pocit z jazdy, rýchlejšie
-              prerozdelenie momentu, menšia závislosť od zásahov bŕzd či
-              obmedzenia výkonu a lepšie využitie zotrvačnosti vozidla v
-              situáciách so slabou trakciou.
+              Koleso stratí trakciu — a v tej chvíli sa rozhoduje, či vozidlo
+              pokračuje ďalej, alebo zostane stáť. Klasický diferenciál v tom
+              momente urobí presný opak toho, čo potrebujete: pošle výkon na
+              koleso, ktoré sa už len točí naprázdno. Elektronické trakčné
+              systémy vedia problém rozpoznať, no potrebujú senzory, riadiacu
+              jednotku a čas na reakciu.{" "}
+              <span className="font-medium text-foreground">
+                TRACS to rieši úplne inak
+              </span>{" "}
+              — čisto mechanicky, bez elektroniky a bez zásahu vodiča, skôr
+              než čokoľvek stihnete zaregistrovať.
             </p>
           </FadeIn>
 
@@ -167,6 +171,9 @@ export default function ProjectsPage() {
                 problémy v ostrých zákrutách (nedotáčavosť, namáhanie
                 hnacieho ústrojenstva, obrusovanie pneumatík) a ponúkajú len
                 režim „otvorené alebo zamknuté“ bez plynulej regulácie.
+                Elektronické trakčné systémy vedia stratu trakcie rozpoznať,
+                no potrebujú senzory otáčok, riadiacu jednotku a čas na
+                vyhodnotenie — kým zasiahnu, koleso už chvíľu prešmykuje.
               </p>
             </FadeIn>
             <FadeIn delay={0.05}>

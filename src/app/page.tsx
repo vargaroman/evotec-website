@@ -40,23 +40,10 @@ const uktArticles = [
   },
 ];
 
-const philosophy = [
-  {
-    title: "Jedna vízia",
-    text: "Stroje a technológie, ktoré fungujú lepšie.",
-  },
-  {
-    title: "Viacero možností",
-    text: "K riešeniu vedie viac ciest — hľadáme tú najlepšiu pre daný projekt.",
-  },
-  {
-    title: "Jeden cieľ",
-    text: "Spoľahlivé riešenie, ktoré reálne funguje v praxi.",
-  },
-  {
-    title: "Spokojný zákazník",
-    text: "Výsledok, pre ktorý to celé robíme.",
-  },
+const philosophyParagraphs = [
+  "Veríme, že dobrá technológia nemusí byť komplikovaná. Mala by byť prirodzenou súčasťou stroja, robiť svoju prácu spoľahlivo a prinášať skutočný úžitok.",
+  "Zaujímajú nás veci, ktoré sa dajú robiť inak. Premýšľame nad tým, čo je dnes považované za samozrejmé, a hľadáme možnosti, ako to posunúť ďalej.",
+  "Spájame praktické skúsenosti s odvahou skúšať nové princípy. Nie preto, aby sme vytvorili niečo nové za každú cenu, ale preto, aby výsledok dával zmysel.",
 ];
 
 export default async function Home() {
@@ -270,27 +257,25 @@ export default async function Home() {
                   <span className="font-mono text-xs tracking-widest text-brand uppercase">
                     Naša filozofia
                   </span>
+                  <h2 className="mt-3 max-w-xl text-2xl font-semibold tracking-tight sm:text-3xl">
+                    Hľadáme jednoduchšie riešenia zložitých problémov.
+                  </h2>
                 </FadeIn>
 
-                <div className="mt-8 grid gap-8 sm:grid-cols-2">
-                  {philosophy.map((item, index) => (
-                    <FadeIn key={item.title} delay={index * 0.08}>
-                      <div className="flex items-start gap-4">
-                        <span className="font-mono text-sm text-muted-foreground/60">
-                          0{index + 1}
-                        </span>
-                        <div>
-                          <p className="text-lg font-semibold tracking-tight">
-                            {item.title}
-                          </p>
-                          <p className="mt-1.5 text-sm text-muted-foreground">
-                            {item.text}
-                          </p>
-                        </div>
-                      </div>
+                <div className="mt-8 max-w-xl space-y-4">
+                  {philosophyParagraphs.map((paragraph, index) => (
+                    <FadeIn key={paragraph} delay={0.05 + index * 0.05}>
+                      <p className="text-muted-foreground">{paragraph}</p>
                     </FadeIn>
                   ))}
                 </div>
+
+                <FadeIn delay={0.2}>
+                  <p className="mt-8 max-w-xl text-lg font-medium tracking-tight">
+                    Menej zbytočnej zložitosti. Viac funkčnosti. Viac
+                    priestoru pre nové nápady.
+                  </p>
+                </FadeIn>
               </div>
             </div>
 

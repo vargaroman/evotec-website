@@ -110,6 +110,16 @@ const videos = [
     title: "e:agzat v praxi",
     text: "Nasadenie e:agzat v reálnej prevádzke, v rôznych podmienkach.",
   },
+  {
+    id: "GJYNFOSR_yU",
+    title: "Priamo od zákazníka — Hriňovské strojárne",
+    text: "Video od Hriňovských strojární, ktorým sme riešenie e:agzat dodali — vyorávanie zemiakov a nastavenie vyorávacieho pluhu.",
+  },
+  {
+    id: "sil4W1KRGbY",
+    title: "Hlboká orba",
+    text: "Ďalšie video priamo od Hriňovských strojární — jesenné zaorávanie kompostu a zeleného hnojiva.",
+  },
 ];
 
 export default function EagzatDevelopmentPage() {
