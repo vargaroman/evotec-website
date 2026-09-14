@@ -23,6 +23,14 @@ export const siteSettings = defineType({
       rows: 3,
     }),
     defineField({
+      name: "footerTagline",
+      title: "Slogan v pätičke",
+      type: "text",
+      rows: 2,
+      description:
+        "Ak nevyplnené, v pätičke sa použije hlavný slogan (Slogan).",
+    }),
+    defineField({
       name: "logo",
       title: "Logo",
       type: "image",

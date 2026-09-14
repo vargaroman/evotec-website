@@ -11,18 +11,24 @@ import { getServices, getSiteSettings } from "@/lib/content";
 import { projectSummaries } from "@/lib/projects";
 
 const stats = [
-  { value: "2016", label: "Založená" },
-  { value: "100%", label: "Vývoj in-house" },
-  { value: "2", label: "Vlastné technológie" },
+  { value: "2016", label: "Založenie Evotec s.r.o." },
+  { value: "100%", label: "Vlastníctvo projektu jedným konštruktérom" },
+  { value: "2", label: "patentové prihlášky" },
 ];
 
 const uktHighlights = [
-  "Mechanická powershift prevodovka radená pod zaťažením",
-  "Riadenie oboch náprav s režimom „Krab“ pre malý polomer zatáčania",
-  "Integrovaný systém TRACS pre automatickú reguláciu trakcie",
-  "Mokré brzdy na všetkých štyroch kolesách",
-  "Odpojiteľný pohon prednej nápravy",
-  "Navrhnutý pre les, využiteľný aj v agro a komunálnej sfére",
+  "navrhované od základu ako traktor pre prácu v lese, nie ako prestavba",
+  "pracovisko vodiča otočné o 180° s dôrazom na komfort obsluhy",
+  "úsporný 4-valcový motor 55kW/440Nm bez AdBlue",
+  "10-stupňová powershift prevodovka s hydrodynamickým meničom",
+  "manuálne alebo plne automatické radenie všetkých stupňov pod zaťažením",
+  "prevodovka a nápravy dimenzované na výkon 130kW pre spoľahlivosť a životnosť",
+  "100% uzávierky + automatická plynulá regulácia svornosti TRACS",
+  "svetlá výška podvozku 500mm",
+  "výkonný hydraulický systém pre pohon príslušenstva",
+  "odpojiteľný pohon prednej nápravy",
+  "riadenie oboch náprav vrátane režimu „krab“",
+  "možnosť trojbodových závesov s kardanom pre AGRO využitie",
 ];
 
 const uktArticles = [
@@ -30,20 +36,20 @@ const uktArticles = [
     src: "/images/ukt/ukt-sketch.jpg",
     alt: "Technický koncept trakcie UKT Evo — riadenie náprav, TRACS, powershift prevodovka",
     title: "Koncept trakcie UKT Evo",
-    text: "Riadenie oboch náprav, systém TRACS a mechanická powershift prevodovka radená pod zaťažením.",
+    text: "Riadenie oboch náprav, vlastný systém TRACS a powershift pohonné ústrojenstvo vytvárajú základ kompaktného a vysoko manévrovateľného lesného traktora.",
   },
   {
     src: "/images/ukt/ukt-comparison.jpg",
     alt: "Porovnanie výkonu, krútiaceho momentu a hmotnosti podobných lesných traktorov",
-    title: "Porovnanie s podobnými traktormi",
-    text: "Zetor 7745 UKT sa už nevyrába a práve do tejto výkonovej kategórie mierime. Modely LKT 81T a LKT 60 sú výrazne silnejšie, no taký výkon nie je pri bežnej prevádzke vždy potrebný.",
+    title: "Pozícia UKT Evo na trhu",
+    text: "UKT Evo cieli do priestoru medzi lesnými úpravami poľnohospodárskych traktorov a ťažšími špecializovanými skiddermi — ako ľahký a cenovo dostupnejší stroj navrhnutý od začiatku pre prácu v lese.",
   },
 ];
 
 const philosophyParagraphs = [
-  "Veríme, že dobrá technológia nemusí byť komplikovaná. Mala by byť prirodzenou súčasťou stroja, robiť svoju prácu spoľahlivo a prinášať skutočný úžitok.",
-  "Zaujímajú nás veci, ktoré sa dajú robiť inak. Premýšľame nad tým, čo je dnes považované za samozrejmé, a hľadáme možnosti, ako to posunúť ďalej.",
-  "Spájame praktické skúsenosti s odvahou skúšať nové princípy. Nie preto, aby sme vytvorili niečo nové za každú cenu, ale preto, aby výsledok dával zmysel.",
+  "Každý projekt začíname pochopením toho, čo má stroj v reálnej prevádzke dosiahnuť, čo obsluhe komplikuje prácu a kde vzniká priestor pre lepšie riešenie.",
+  "Na techniku sa pozeráme ako na jeden funkčný celok. Hľadáme princíp, ktorý zjednoduší konštrukciu, ovládanie alebo prevádzku a zároveň prinesie používateľovi merateľný úžitok.",
+  "Spájame praktické skúsenosti, konštrukčný vývoj a rýchle prototypovanie. Overujeme riešenia v praxi a ďalej ich rozvíjame podľa reálneho správania stroja.",
 ];
 
 export default async function Home() {
@@ -117,7 +123,7 @@ export default async function Home() {
               Vybraná práca
             </span>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-              Technológie, ktoré sme vyvinuli
+              Technológie a stroje, ktoré vyvíjame
             </h2>
           </FadeIn>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -177,16 +183,18 @@ export default async function Home() {
                   </span>
                   <div className="mt-3 flex flex-wrap items-center gap-3">
                     <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                      UKT — Univerzálny kolesový traktor
+                      UKT Evo — nový koncept lesného traktora
                     </h2>
                     <Badge variant="outline">Vo vývoji</Badge>
                   </div>
                   <p className="mt-4 max-w-2xl text-muted-foreground">
-                    Vyvíjame univerzálny kolesový traktor predovšetkým pre
-                    lesné hospodárstvo, s presahom do poľnohospodárstva a
-                    komunálnych služieb. Koncept kombinuje mechanickú
-                    powershift prevodovku radenú pod zaťažením, riadenie
-                    oboch náprav a našu vlastnú trakčnú technológiu TRACS.
+                    Vyvíjame moderného nástupcu traktorov typu Zetor 7745
+                    UKT. Traktor do 6 ton s pevným rámom a natáčaním
+                    všetkých kolies navrhnutý priamo pre úväzkové
+                    približovanie dreva pri ťažbe v lese. Koncept spája
+                    vysokú manévrovateľnosť a jednoduchú architektúru s
+                    vysokým dôrazom na bezpečnosť, ergonómiu používania a
+                    nižšími nákladmi na kúpu aj prevádzku stroja.
                   </p>
                 </FadeIn>
 
@@ -211,7 +219,7 @@ export default async function Home() {
                     Náš proces
                   </span>
                   <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                    Od konceptu po funkčný prototyp
+                    Od reálneho problému k funkčnému produktu
                   </h2>
                 </FadeIn>
 
@@ -258,7 +266,7 @@ export default async function Home() {
                     Naša filozofia
                   </span>
                   <h2 className="mt-3 max-w-xl text-2xl font-semibold tracking-tight sm:text-3xl">
-                    Hľadáme jednoduchšie riešenia zložitých problémov.
+                    Začíname problémom, nie zaužívaným riešením.
                   </h2>
                 </FadeIn>
 
@@ -272,8 +280,8 @@ export default async function Home() {
 
                 <FadeIn delay={0.2}>
                   <p className="mt-8 max-w-xl text-lg font-medium tracking-tight">
-                    Menej zbytočnej zložitosti. Viac funkčnosti. Viac
-                    priestoru pre nové nápady.
+                    Funkčnosť, jednoduchosť a reálny úžitok sú pre nás
+                    hlavné kritériá dobrého návrhu.
                   </p>
                 </FadeIn>
               </div>
@@ -309,7 +317,8 @@ export default async function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-20 md:flex-row md:items-center md:justify-between">
           <FadeIn>
             <h2 className="max-w-xl text-2xl font-semibold tracking-tight sm:text-3xl">
-              Máte projekt, o ktorom chcete hovoriť?
+              Máte technický problém alebo produkt, ktorý chcete posunúť
+              ďalej?
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>

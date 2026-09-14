@@ -38,6 +38,7 @@ export type SiteSettings = {
   siteTitle: string;
   tagline?: string;
   description?: string;
+  footerTagline?: string;
   logo?: Image;
   email?: string;
   phone?: string;
@@ -50,6 +51,8 @@ const fallbackSiteSettings: SiteSettings = {
   tagline: "Vyvíjame stroje a technické riešenia, ktoré ľuďom uľahčujú prácu.",
   description:
     "Evotec je vývojová kancelária zameraná na pracovné stroje, pohonové systémy a vlastné technológie. Od identifikácie reálneho problému a návrhu konceptu až po funkčný prototyp, prezentáciu a prípravu produktu pre výrobu.",
+  footerTagline:
+    "Vývoj pracovných strojov, vlastných technológií a funkčných prototypov od prvého konceptu až po prípravu pre výrobu.",
   email: "pastor.evotec@gmail.com",
   phone: "+421 917 495 338",
   address: "Hlavná 18/37, 076 12 Kuzmice",
@@ -58,28 +61,28 @@ const fallbackSiteSettings: SiteSettings = {
 
 const fallbackServices: Service[] = [
   {
-    title: "Koncept a systémová architektúra",
+    title: "Pochopenie problému a koncept",
     icon: "compass",
     shortDescription:
-      "Definícia požiadaviek, produktová stratégia a návrh architektúry stroja alebo pohonu ešte pred prvým výkresom.",
+      "Identifikujeme podstatu problému, požiadavky používateľa a priestor pre lepšie riešenie. Na tomto základe vzniká produktový koncept a architektúra stroja.",
   },
   {
-    title: "Mechanický vývoj a integrácia",
+    title: "Konštrukčný vývoj a integrácia",
     icon: "cog",
     shortDescription:
-      "Mechanický dizajn, kompletácia komponentov a packaging do funkčného, vyrobiteľného celku.",
+      "Navrhujeme mechaniku, vyberáme vhodné komponenty a integrujeme jednotlivé systémy do funkčného, vyrobiteľného a servisovateľného celku.",
   },
   {
-    title: "Elektrifikácia pohonov",
+    title: "Prototyp a iterácia",
     icon: "zap",
     shortDescription:
-      "Výber elektrického pohonu, výkonovej elektroniky a batériového systému vrátane riadiacej logiky a bezpečnostných funkcií.",
+      "Myšlienku čo najskôr prenášame do funkčného prototypu. Testovanie v reálnych podmienkach používame priamo ako vstup pre ďalší vývoj.",
   },
   {
-    title: "Prototypovanie a validácia",
+    title: "Príprava pre výrobu",
     icon: "flask-conical",
     shortDescription:
-      "Stavba prototypu, testovanie a ladenie priamo v teréne, príprava dokumentácie pre výrobnú pripravenosť.",
+      "Výsledné riešenie rozpracujeme do technických podkladov potrebných pre výrobu, montáž a zavedenie produktu do praxe.",
   },
 ];
 

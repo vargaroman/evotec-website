@@ -5,6 +5,7 @@ import type { SiteSettings } from "@/lib/content";
 
 export function Footer({ siteSettings }: { siteSettings: SiteSettings }) {
   const year = new Date().getFullYear();
+  const footerTagline = siteSettings.footerTagline ?? siteSettings.tagline;
 
   return (
     <footer className="border-t border-border bg-muted/30">
@@ -13,9 +14,9 @@ export function Footer({ siteSettings }: { siteSettings: SiteSettings }) {
           <p className="text-lg font-semibold tracking-tight">
             {siteSettings.siteTitle}
           </p>
-          {siteSettings.tagline && (
+          {footerTagline && (
             <p className="mt-2 text-sm text-muted-foreground">
-              {siteSettings.tagline}
+              {footerTagline}
             </p>
           )}
         </div>

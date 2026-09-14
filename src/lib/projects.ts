@@ -16,7 +16,7 @@ export const projectSummaries: ProjectSummary[] = [
     tagline: "Torque Redistribution Automatic Coupling System",
     icon: "shield",
     shortDescription:
-      "Koleso stratí trakciu — a TRACS zareaguje skôr, než to stihnete postrehnúť. Čisto mechanicky, bez senzorov a bez zásahu vodiča.",
+      "Patentované mechanické riešenie, ktoré automaticky prerozdeľuje krútiaci moment pri strate trakcie. Bez elektronického riadenia, senzorov alebo zásahu vodiča.",
     image: {
       src: "/images/projects/tracs-field-test.jpg",
       alt: "Testovanie trakcie TRACS v teréne na dvoch traktoroch",
@@ -26,10 +26,10 @@ export const projectSummaries: ProjectSummary[] = [
     id: "eagzat",
     title: "e:agzat",
     tag: "End-to-end elektrifikácia",
-    tagline: "Elektrický pohon pre dvojkolesový traktor",
+    tagline: "Od konceptu až po sériovú výrobu",
     icon: "zap",
     shortDescription:
-      "Kompletné elektrifikačné riešenie pre slovenského výrobcu dvojkolesových traktorov — od architektúry po vystavovateľný prototyp, overené v reálnej prevádzke.",
+      "Kompletný 48 V pohonný systém pre dvojkolesový traktor. Od identifikácie produktovej príležitosti a návrhu architektúry cez funkčný prototyp a prezentáciu na výstavách až po výrobné podklady predsériovej verzie.",
     image: {
       src: "/images/projects/eagzat-hero.jpg",
       alt: "Elektrický dvojkolesový traktor e:agzat",
