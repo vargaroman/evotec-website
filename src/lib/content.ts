@@ -53,7 +53,7 @@ const fallbackSiteSettings: SiteSettings = {
     "Evotec navrhuje a vyvíja pracovné stroje, pohonové systémy a nové technológie — od konceptu až po funkčný prototyp. Produktová stratégia, mechanický vývoj, elektrifikácia aj testovanie pod jednou strechou.",
   email: "pastor.evotec@gmail.com",
   phone: "+421 917 495 338",
-  address: "Hlavná 18, 076 12 Kuzmice",
+  address: "Hlavná 18/37, 076 12 Kuzmice",
   socialLinks: [],
 };
 
