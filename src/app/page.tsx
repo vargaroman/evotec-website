@@ -58,7 +58,7 @@ export default async function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-28 md:py-36">
           <FadeIn>
             <span className="font-mono text-xs tracking-widest text-brand uppercase">
-              Vývoj strojov a pohonových technológií
+              Vývoj strojov a nových technológií
             </span>
           </FadeIn>
           <FadeIn delay={0.1}>

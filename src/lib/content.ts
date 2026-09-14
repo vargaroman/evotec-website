@@ -47,10 +47,9 @@ export type SiteSettings = {
 
 const fallbackSiteSettings: SiteSettings = {
   siteTitle: "Evotec",
-  tagline:
-    "Vlastný vývoj, patentované technológie a prototypy pre elektrifikáciu a pohony pracovných strojov.",
+  tagline: "Vyvíjame stroje a technické riešenia, ktoré ľuďom uľahčujú prácu.",
   description:
-    "Evotec navrhuje a vyvíja pracovné stroje, pohonové systémy a nové technológie — od konceptu až po funkčný prototyp. Produktová stratégia, mechanický vývoj, elektrifikácia aj testovanie pod jednou strechou.",
+    "Evotec je vývojová kancelária zameraná na pracovné stroje, pohonové systémy a vlastné technológie. Od identifikácie reálneho problému a návrhu konceptu až po funkčný prototyp, prezentáciu a prípravu produktu pre výrobu.",
   email: "pastor.evotec@gmail.com",
   phone: "+421 917 495 338",
   address: "Hlavná 18/37, 076 12 Kuzmice",
